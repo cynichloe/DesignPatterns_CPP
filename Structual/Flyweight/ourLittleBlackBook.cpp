@@ -8,11 +8,8 @@ class BlackEntry {
         void setDeeds(String deed){
             m_deed=deed;
         }
-        void speech() const {
-            cout<<m_deed<<endl;
-        }
+        virtual void speech() const ;
     private:
-        const String m_Apology;
         String m_deed;
 };
 
@@ -21,15 +18,25 @@ class BlackEntry {
 class ShibeAtFault : public BlackEntry {
     public:
         ShibeAtFault(){
-            m_Apology="Sorry from Shibe!"; 
+            m_Apology="Sorry from Shibe! "; 
         }
+        void speech() const {
+            ccout<<m_Apology<<m_deed<<endl;
+        }
+    private:
+    	const String m_Apology;
 }
 
 class RaccoonAtFault : public BlackEntry{
     public:
       RaccoonAtFault(){
-         m_Apology="Sorry from Raccugi!";
+         m_Apology="Sorry from Raccugi! ";
       }
+      void speech() const {
+            cout<<m_Apology<<m_deed<<endl;
+        }
+  private:
+        const String m_Apology;
 }
 /////////////
 
