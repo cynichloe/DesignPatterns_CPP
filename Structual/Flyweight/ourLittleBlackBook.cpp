@@ -5,7 +5,7 @@ using namespace std;
 // This common interface is what interact with the factory
 class BlackEntry {
     public:
-        void setDeeds(String deed)(String deed){
+        void setDeeds(String deed){
             m_deed=deed;
         }
         void speech() const {
@@ -19,7 +19,6 @@ class BlackEntry {
 ////////////////////
 // real cases implementing the interface, variables reside here.
 class ShibeAtFault : public BlackEntry {
-    
     public:
         ShibeAtFault(){
             m_Apology="Sorry from Shibe!"; 
