@@ -1,0 +1,8 @@
+my thoughts on flyweight pattern
+the problem background is, 
+1) a lot of very similar objects need to be created.
+--within each group of objects, some intrinsic variables can be derived.
+2) objects once created and being used once, 
+3) objects once created and used, will not be used again and hence no changes will be made to them--immutable
+
+
