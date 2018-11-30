@@ -5,41 +5,31 @@ using namespace std;
 // This common interface is what interact with the factory
 class BlackEntry {
     public:
-        void setDeeds(String deed);
-        void speech() const ;
+        void setDeeds(String deed)(String deed){
+            m_deed=deed;
+        }
+        void speech() const {
+            cout<<m_deed<<endl;
+        }
+    private:
+        const String m_Apology;
+        String m_deed;
 };
 
 ////////////////////
 // real cases implementing the interface, variables reside here.
 class ShibeAtFault : public BlackEntry {
-    private:
-        const String m_Apology;
-        String m_deed;
+    
     public:
         ShibeAtFault(){
             m_Apology="Sorry from Shibe!"; 
         }
-        void setDeeds(String deed){
-            m_deed=deed;
-        }
-        void speech() const{
-            cout<<m_Apology<<" "<<m_deed<<endl;
-        }
 }
 
 class RaccoonAtFault : public BlackEntry{
-    private:
-      const String m_Apology;
-      String m_deed;
     public:
       RaccoonAtFault(){
          m_Apology="Sorry from Raccugi!";
-      }
-      void setDeeds(String deed){
-          m_deed=deed;
-      }
-      void speech() const{
-         cout<<m_Apology<<" "<<m_deed<<endl;
       }
 }
 /////////////
